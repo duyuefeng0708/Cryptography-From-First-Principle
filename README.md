@@ -39,6 +39,31 @@ Every module follows four phases:
 | 11 | Homomorphic Encryption | BGV, BFV, CKKS |
 | 12 | Multi-Party Computation | Secret sharing, Yao's GC, SPDZ |
 
+## How to Work Through a Module
+
+Each module has its own `README.md` with prerequisites, learning objectives, and a detailed roadmap. Here's the general workflow:
+
+### 1. Explore (SageMath notebooks)
+```bash
+cd foundations/01-modular-arithmetic-groups/sage
+jupyter notebook 01a-integers-and-division.ipynb
+```
+Work through the notebooks **in order** (a → b → c → ...). Each builds on the last with no logical jumps. Run every cell, modify examples, answer the exercises.
+
+### 2. Implement (Rust exercises)
+```bash
+cd foundations/01-modular-arithmetic-groups/rust
+cargo test -- --ignored test_mod_exp   # Run a specific exercise
+cargo test -- --ignored               # Run all exercises in this module
+```
+Each `lib.rs` contains exercises ordered by difficulty. Replace `todo!()` with your implementation. Early modules provide loop skeletons and hints; later modules give only function signatures.
+
+### 3. Break
+Open the `break/` directory for guided attacks on weakened versions of the primitives you just built. These show *why* parameter choices and security properties matter.
+
+### 4. Connect
+The `connect/` directory traces the math to real-world protocols — find where your group theory shows up in TLS, where your elliptic curves appear in Signal, etc.
+
 ## Prerequisites
 
 - **SageMath** ≥ 10.0 — [Install](https://www.sagemath.org/download.html)
