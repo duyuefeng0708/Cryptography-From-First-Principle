@@ -1,0 +1,22 @@
+# Rust
+/target/
+**/target/
+Cargo.lock
+
+# Jupyter
+.ipynb_checkpoints/
+**/.ipynb_checkpoints/
+
+# SageMath
+*.sage.py
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+
+# Claude
+.claude/settings.local.json

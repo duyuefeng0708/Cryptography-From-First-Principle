@@ -1,0 +1,22 @@
+[workspace]
+resolver = "2"
+members = [
+    "shared",
+    "foundations/01-modular-arithmetic-groups/rust",
+    "foundations/02-rings-fields-polynomials/rust",
+    "foundations/03-galois-fields-aes/rust",
+    "foundations/04-number-theory-rsa/rust",
+    "foundations/05-discrete-log-diffie-hellman/rust",
+    "foundations/06-elliptic-curves/rust",
+    "frontier/07-pairings/rust",
+    "frontier/08-lattices-post-quantum/rust",
+    "frontier/09-commitments-sigma-protocols/rust",
+    "frontier/10-snarks-starks/rust",
+    "frontier/11-homomorphic-encryption/rust",
+    "frontier/12-mpc/rust",
+]
+
+[workspace.dependencies]
+num-bigint = "0.4"
+num-traits = "0.2"
+rand = "0.8"
