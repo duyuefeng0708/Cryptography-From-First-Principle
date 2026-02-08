@@ -66,9 +66,76 @@ The `connect/` directory traces the math to real-world protocols — find where 
 
 ## Prerequisites
 
-- **SageMath** ≥ 10.0 — [Install](https://www.sagemath.org/download.html)
-- **Rust** ≥ 1.75 — [Install](https://rustup.rs)
+- **Rust** ≥ 1.75
+- **SageMath** ≥ 10.0 (via conda)
 - **Jupyter** with SageMath kernel
+
+### Linux (Ubuntu/Debian)
+
+```bash
+# Rust
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+source ~/.cargo/env
+
+# SageMath + Jupyter (via Miniforge)
+curl -L -O "https://github.com/conda-forge/miniforge/releases/latest/download/Miniforge3-Linux-x86_64.sh"
+bash Miniforge3-Linux-x86_64.sh
+source ~/miniforge3/etc/profile.d/conda.sh
+conda create -n sage sage jupyter -c conda-forge
+conda activate sage
+
+# Register SageMath kernel (visible to VS Code / JupyterLab outside the env)
+python -m sage.repl.ipython_kernel.install --user
+
+# Verify
+rustc --version
+jupyter kernelspec list   # should show "sagemath"
+```
+
+### macOS
+
+```bash
+# Rust
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+source ~/.cargo/env
+
+# SageMath + Jupyter (via Miniforge)
+curl -L -O "https://github.com/conda-forge/miniforge/releases/latest/download/Miniforge3-MacOSX-$(uname -m).sh"
+bash Miniforge3-MacOSX-$(uname -m).sh
+source ~/miniforge3/etc/profile.d/conda.sh
+conda create -n sage sage jupyter -c conda-forge
+conda activate sage
+
+# Register SageMath kernel
+python -m sage.repl.ipython_kernel.install --user
+
+# Verify
+rustc --version
+jupyter kernelspec list
+```
+
+### Windows
+
+```powershell
+# Rust — download and run the installer from https://rustup.rs
+
+# SageMath + Jupyter (via Miniforge)
+# Download Miniforge3-Windows-x86_64.exe from:
+#   https://github.com/conda-forge/miniforge/releases/latest
+# Run the installer, then open Miniforge Prompt:
+
+conda create -n sage sage jupyter -c conda-forge
+conda activate sage
+
+# Register SageMath kernel
+python -m sage.repl.ipython_kernel.install --user
+
+# Verify
+rustc --version
+jupyter kernelspec list
+```
+
+> **VS Code users**: Install the [Jupyter](https://marketplace.visualstudio.com/items?itemName=ms-toolsai.jupyter) extension. Open any `.ipynb`, click **Select Kernel** → **Jupyter Kernel** → **SageMath**.
 
 ## License
 
