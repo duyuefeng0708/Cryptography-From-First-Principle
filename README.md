@@ -10,14 +10,14 @@ We bridge the gap: **algebra → intuition → working code → real protocols**
 
 Every module follows four phases:
 
-1. **Explore** (SageMath) — Interactive notebooks to build mathematical intuition
-2. **Implement** (Rust) — Build the cryptographic primitive from scratch
-3. **Break** — Attack weakened versions to understand why parameters matter
-4. **Connect** — Trace the math to real protocols (TLS, Signal, Zcash...)
+1. **Explore** in SageMath notebooks that build mathematical intuition
+2. **Implement** in Rust, building each cryptographic primitive from scratch
+3. **Break** weakened versions to understand why parameters matter
+4. **Connect** the math to real protocols like TLS, Signal, and Zcash
 
 ## Structure
 
-### Part I — Foundations (BSc)
+### Foundations (BSc)
 
 | # | Module | Key Concepts |
 |---|--------|-------------|
@@ -28,7 +28,7 @@ Every module follows four phases:
 | 05 | Discrete Log & Diffie-Hellman | DLP, CDH, DDH, key exchange |
 | 06 | Elliptic Curves | Weierstrass form, point addition, ECDH, ECDSA |
 
-### Part II — Frontier (Postgraduate)
+### Frontier (Postgraduate)
 
 | # | Module | Key Concepts |
 |---|--------|-------------|
@@ -62,7 +62,7 @@ Each `lib.rs` contains exercises ordered by difficulty. Replace `todo!()` with y
 Open the `break/` directory for guided attacks on weakened versions of the primitives you just built. These show *why* parameter choices and security properties matter.
 
 ### 4. Connect
-The `connect/` directory traces the math to real-world protocols — find where your group theory shows up in TLS, where your elliptic curves appear in Signal, etc.
+The `connect/` directory traces the math to real protocols. Find where your group theory shows up in TLS, where your elliptic curves appear in Signal, and so on.
 
 ## Prerequisites
 
@@ -117,7 +117,7 @@ jupyter kernelspec list
 ### Windows
 
 ```powershell
-# Rust — download and run the installer from https://rustup.rs
+# Rust: download and run the installer from https://rustup.rs
 
 # SageMath + Jupyter (via Miniforge)
 # Download Miniforge3-Windows-x86_64.exe from:
@@ -135,7 +135,20 @@ rustc --version
 jupyter kernelspec list
 ```
 
-> **VS Code users**: Install the [Jupyter](https://marketplace.visualstudio.com/items?itemName=ms-toolsai.jupyter) extension. Open any `.ipynb`, click **Select Kernel** → **Jupyter Kernel** → **SageMath**.
+### VS Code Setup
+
+Install the [Jupyter](https://marketplace.visualstudio.com/items?itemName=ms-toolsai.jupyter) extension, then connect to a SageMath Jupyter server:
+
+1. Start the server (inside the conda env):
+   ```bash
+   conda activate sage
+   sage -n jupyter
+   ```
+2. Copy the URL with token from the terminal output (e.g. `http://localhost:8888/?token=abc123...`).
+3. In VS Code, open any `.ipynb`, click **Select Kernel**, then **Existing Jupyter Server**, and paste the URL.
+4. Select the **SageMath** kernel from the list.
+
+The server stays running. You only need to do steps 2 through 4 once per session.
 
 ## License
 

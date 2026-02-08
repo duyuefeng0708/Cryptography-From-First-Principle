@@ -1,10 +1,10 @@
 # Module 08: Lattices and Post-Quantum Cryptography
 
-The geometry of integer grids — and why quantum computers can't break them.
+The geometry of integer grids, and why quantum computers can't break them.
 
 ## Prerequisites
 
-- [Module 01: Modular Arithmetic](../../foundations/01-modular-arithmetic/) — modular reduction, congruences, and arithmetic in Z_n
+- [Module 01: Modular Arithmetic](../../foundations/01-modular-arithmetic-groups/) (modular reduction, congruences, and arithmetic in Z_n)
 - Linear algebra familiarity (bases, linear independence, inner products)
 
 ## Learning Objectives
@@ -23,10 +23,10 @@ Work through these notebooks in order:
 |---|----------|-------------------|
 | a | [Lattices and Bases](sage/08a-lattices-and-bases.ipynb) | What a lattice is, how different bases span the same lattice, visualizing in 2D |
 | b | [Shortest Vector Problem](sage/08b-shortest-vector-problem.ipynb) | Why finding short vectors is hard, and how SVP/CVP relate to cryptography |
-| c | [LLL Algorithm](sage/08c-lll-algorithm.ipynb) | Step-by-step LLL basis reduction with animated lattice plots |
+| c | [LLL Algorithm](sage/08c-lll-algorithm.ipynb) | Step by step LLL basis reduction with animated lattice plots |
 | d | [Learning With Errors](sage/08d-learning-with-errors.ipynb) | The LWE problem: hiding secrets in noisy linear equations |
 | e | [Ring-LWE](sage/08e-ring-lwe.ipynb) | Adding polynomial ring structure for efficiency |
-| f | [Kyber Overview](sage/08f-kyber-overview.ipynb) | End-to-end walkthrough of ML-KEM key encapsulation |
+| f | [Kyber Overview](sage/08f-kyber-overview.ipynb) | End to end walkthrough of ML-KEM key encapsulation |
 
 ## Implement (Rust)
 
@@ -44,15 +44,15 @@ Run: `cargo test -p lattices-pq`
 
 ## Break
 
-Attack exercises in `break/`:
-- **LLL attack on a low-dimension lattice scheme** — use basis reduction to recover the secret key when the lattice dimension is too small
-- **Recover LWE secret with no noise** — observe how removing the error term makes LWE trivially solvable via Gaussian elimination
+Try these attacks in the `break/` folder:
+- **LLL attack on a low dimension lattice scheme.** Use basis reduction to recover the secret key when the lattice dimension is too small.
+- **Recover LWE secret with no noise.** Observe how removing the error term makes LWE trivially solvable via Gaussian elimination.
 
 ## Connect
 
-Real-world appearances in `connect/`:
-- **NIST PQC standards** — ML-KEM (Kyber) for key encapsulation and ML-DSA (Dilithium) for digital signatures are the first post-quantum standards
-- **Hybrid TLS with post-quantum** — Chrome and Cloudflare already deploy X25519+ML-KEM hybrid key exchange to hedge against quantum threats
+See where this shows up in practice (in the `connect/` folder):
+- **NIST PQC standards.** ML-KEM (Kyber) for key encapsulation and ML-DSA (Dilithium) for digital signatures are the first post-quantum standards.
+- **Hybrid TLS with post-quantum.** Chrome and Cloudflare already deploy X25519+ML-KEM hybrid key exchange to hedge against quantum threats.
 
 ---
 *Next: [Module 09: Commitment Schemes and Sigma Protocols](../09-commitments-sigma-protocols/)*

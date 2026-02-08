@@ -4,7 +4,7 @@ Adding a second operation opens the door to polynomial algebra and field extensi
 
 ## Prerequisites
 
-- [Module 01: Modular Arithmetic and Groups](../01-modular-arithmetic-groups/) — groups, modular arithmetic
+- [Module 01: Modular Arithmetic and Groups](../01-modular-arithmetic-groups/) (groups, modular arithmetic)
 
 ## Learning Objectives
 
@@ -43,15 +43,15 @@ Run: `cargo test -p rings-fields-poly`
 
 ## Break
 
-Attack exercises in `break/`:
+Try these attacks in the `break/` folder:
 - Factor a "supposedly irreducible" polynomial to break a scheme built on a quotient ring
 - Find zero divisors in Z_n for composite n and show why Z_n fails to be a field
 
 ## Connect
 
-Real-world appearances in `connect/`:
-- AES (GF(2^8)): all AES field arithmetic lives in a polynomial quotient ring
-- Error-correcting codes (Reed-Solomon): polynomial evaluation and interpolation over finite fields
+See where this shows up in practice (in the `connect/` folder):
+- AES uses GF(2^8), where all field arithmetic lives in a polynomial quotient ring
+- Reed-Solomon error correcting codes rely on polynomial evaluation and interpolation over finite fields
 
 ---
 *Next: [Module 03: Galois Fields and AES](../03-galois-fields-aes/)*

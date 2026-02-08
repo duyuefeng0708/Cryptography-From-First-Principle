@@ -4,7 +4,7 @@ A map between curve groups that unlocks BLS signatures, IBE, and the road to SNA
 
 ## Prerequisites
 
-- [Module 06: Elliptic Curves](../../foundations/06-elliptic-curves/) — scalar multiplication, curve groups, and the elliptic-curve discrete-log setting
+- [Module 06: Elliptic Curves](../../foundations/06-elliptic-curves/) (scalar multiplication, curve groups, and the elliptic curve discrete log setting)
 
 ## Learning Objectives
 
@@ -12,7 +12,7 @@ After completing this module you will:
 1. Understand the definition and key properties of a bilinear map
 2. Build geometric intuition for the Weil pairing on elliptic curves
 3. Implement the BLS signature scheme (sign, verify, aggregate)
-4. Grasp how pairings enable identity-based encryption (IBE)
+4. Grasp how pairings enable identity based encryption (IBE)
 
 ## Explore (SageMath Notebooks)
 
@@ -32,7 +32,7 @@ Build these from scratch in `rust/src/lib.rs`:
 
 | # | Function | Description |
 |---|----------|-------------|
-| 1 | `bls_sign` | Sign a message using a private scalar and hash-to-curve |
+| 1 | `bls_sign` | Sign a message using a private scalar and hash to curve |
 | 2 | `bls_verify` | Verify a BLS signature via a pairing equation check |
 | 3 | `bls_aggregate_sigs` | Aggregate multiple BLS signatures into one curve point |
 | 4 | `bls_aggregate_verify` | Verify an aggregate signature against multiple public keys |
@@ -41,15 +41,15 @@ Run: `cargo test -p pairings`
 
 ## Break
 
-Attack exercises in `break/`:
-- **Rogue key attack on naive BLS aggregation** — craft a malicious public key that lets you forge an aggregate signature without knowing all private keys
-- **Pairing inversion attempt** — try to recover discrete logs from pairing outputs and see why the pairing-inversion problem is hard
+Try these attacks in the `break/` folder:
+- **Rogue key attack on naive BLS aggregation.** Craft a malicious public key that lets you forge an aggregate signature without knowing all private keys.
+- **Pairing inversion attempt.** Try to recover discrete logs from pairing outputs and see why the pairing inversion problem is hard.
 
 ## Connect
 
-Real-world appearances in `connect/`:
-- **BLS signatures in Ethereum 2.0 consensus** — validators sign attestations with BLS; aggregation keeps beacon-chain overhead manageable
-- **Pairing-based identity-based encryption** — Boneh-Franklin IBE lets any string serve as a public key, used in enterprise key management
+See where this shows up in practice (in the `connect/` folder):
+- **BLS signatures in Ethereum 2.0 consensus.** Validators sign attestations with BLS, and aggregation keeps beacon chain overhead manageable.
+- **Pairing based identity based encryption.** The Boneh-Franklin IBE scheme lets any string serve as a public key, used in enterprise key management.
 
 ---
 *Next: [Module 08: Lattices and Post-Quantum Cryptography](../08-lattices-post-quantum/)*

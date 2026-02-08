@@ -4,7 +4,7 @@ From clock arithmetic to the algebraic structures that underpin all of cryptogra
 
 ## Prerequisites
 
-- None — this is the entry point
+No prior modules needed. This is the starting point.
 
 ## Learning Objectives
 
@@ -43,14 +43,14 @@ Run: `cargo test -p mod-arith-groups`
 
 ## Break
 
-Attack exercises in `break/`:
-- Recover a secret from a group with smooth order (factor the order, solve in each subgroup)
-- Exploit weak generator choice to reduce the search space of a brute-force attack
+Try these attacks in the `break/` folder:
+- Recover a secret from a group with smooth order by factoring the order and solving in each subgroup
+- Exploit weak generator choice to reduce the search space of a brute force attack
 
 ## Connect
 
-Real-world appearances in `connect/`:
-- RSA key generation: modular arithmetic underlies encryption and decryption in RSA
+See where this shows up in practice (in the `connect/` folder):
+- RSA key generation relies on modular arithmetic for encryption and decryption
 - Diffie-Hellman parameter selection: choosing a safe prime ensures the group has strong structure
 
 ---

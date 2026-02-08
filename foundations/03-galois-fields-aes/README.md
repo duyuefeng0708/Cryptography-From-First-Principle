@@ -4,14 +4,14 @@ See how abstract field theory becomes the concrete engine inside AES.
 
 ## Prerequisites
 
-- [Module 02: Rings, Fields, and Polynomials](../02-rings-fields-polynomials/) — fields, polynomial rings, quotient rings
+- [Module 02: Rings, Fields, and Polynomials](../02-rings-fields-polynomials/) (fields, polynomial rings, quotient rings)
 
 ## Learning Objectives
 
 After completing this module you will:
 1. Construct GF(2^8) as a polynomial quotient ring
 2. Perform field arithmetic (add, multiply, invert) in GF(256)
-3. Understand every AES operation as a field-theoretic transformation
+3. Understand every AES operation as a field theoretic transformation
 4. Build the AES S-box from first principles using field inverses and affine maps
 
 ## Explore (SageMath Notebooks)
@@ -25,7 +25,7 @@ Work through these notebooks in order:
 | c | [GF(256) Arithmetic](sage/03c-gf256-arithmetic.ipynb) | Addition as XOR, multiplication via polynomial reduction |
 | d | [AES S-box Construction](sage/03d-aes-sbox-construction.ipynb) | Field inverse + affine transform = the S-box |
 | e | [AES MixColumns as Field Ops](sage/03e-aes-mixcolumns-as-field-ops.ipynb) | MixColumns as matrix multiplication over GF(256) |
-| f | [Full AES Round](sage/03f-full-aes-round.ipynb) | SubBytes, ShiftRows, MixColumns, AddRoundKey end-to-end |
+| f | [Full AES Round](sage/03f-full-aes-round.ipynb) | SubBytes, ShiftRows, MixColumns, AddRoundKey end to end |
 
 ## Implement (Rust)
 
@@ -43,15 +43,15 @@ Run: `cargo test -p galois-fields-aes`
 
 ## Break
 
-Attack exercises in `break/`:
+Try these attacks in the `break/` folder:
 - Construct a weak S-box using a reducible polynomial and show the resulting algebraic vulnerability
 - Show why ECB mode leaks patterns by encrypting a structured image
 
 ## Connect
 
-Real-world appearances in `connect/`:
-- AES-128/256 in TLS 1.3: the cipher suite that protects most web traffic
-- AES-GCM authenticated encryption: combining AES with Galois field-based authentication
+See where this shows up in practice (in the `connect/` folder):
+- AES 128/256 in TLS 1.3 is the cipher suite that protects most web traffic
+- AES-GCM authenticated encryption combines AES with Galois field based authentication
 
 ---
 *Next: [Module 04: Number Theory and RSA](../04-number-theory-rsa/)*
