@@ -10,5 +10,5 @@
 
 - [ ] Notebooks are valid JSON (`python3 -c "import json; json.load(open('file.ipynb'))"`)
 - [ ] Rust code compiles (`cargo build --workspace`)
-- [ ] No logical jumps — each cell follows naturally from the last
+- [ ] No logical jumps: each cell follows naturally from the last
 - [ ] Exercises have clear instructions

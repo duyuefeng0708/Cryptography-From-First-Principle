@@ -5,7 +5,7 @@
 [![Launch Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/duyuefeng0708/learn-cryptography/main)
 [![GitHub Discussions](https://img.shields.io/github/discussions/duyuefeng0708/learn-cryptography)](https://github.com/duyuefeng0708/learn-cryptography/discussions)
 
-**Learn cryptography by building it.** 123 interactive notebooks, 57 Rust exercises, 12 modules — from modular arithmetic to zero-knowledge proofs.
+**Learn cryptography by building it.** 123 interactive notebooks, 57 Rust exercises, 12 modules, from modular arithmetic to zero-knowledge proofs.
 
 <p align="center">
   <img src="docs/images/module-flow.png" alt="Learning flow: Explore, Implement, Break, Connect" width="100%">
@@ -15,10 +15,10 @@
 
 Traditional crypto education either drowns you in pure math or hands you a library. We bridge the gap:
 
-- **Explore** the math in SageMath — visualize groups, curves, and lattices
-- **Implement** every primitive from scratch in Rust — no magic black boxes
-- **Break** weakened versions — see exactly why parameters matter
-- **Connect** to real protocols — find your math in TLS, Bitcoin, Signal, and Zcash
+- **Explore** the math in SageMath. Visualize groups, curves, and lattices
+- **Implement** every primitive from scratch in Rust. No magic black boxes
+- **Break** weakened versions. See exactly why parameters matter
+- **Connect** to real protocols. Find your math in TLS, Bitcoin, Signal, and Zcash
 
 ### How does this compare?
 
@@ -41,7 +41,7 @@ Traditional crypto education either drowns you in pure math or hands you a libra
 
 ## Try It Now
 
-**No install needed** — launch in your browser:
+**No install needed.** Launch in your browser:
 
 [![Launch Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/duyuefeng0708/learn-cryptography/main?labpath=foundations%2F01-modular-arithmetic-groups%2Fsage%2F01a-integers-and-division.ipynb)
 
@@ -82,16 +82,16 @@ jupyter notebook foundations/01-modular-arithmetic-groups/sage/01a-integers-and-
 
 Each module has its own `README.md` with prerequisites, learning objectives, and a detailed roadmap.
 
-**1. Explore** — Work through the SageMath notebooks in order (a, b, c, ...). Run every cell, modify examples, answer the exercises.
+**1. Explore.** Work through the SageMath notebooks in order (a, b, c, ...). Run every cell, modify examples, answer the exercises.
 
-**2. Implement** — Open `rust/src/lib.rs` and replace `todo!()` with your code. Early modules give loop skeletons; later modules give only function signatures.
+**2. Implement.** Open `rust/src/lib.rs` and replace `todo!()` with your code. Early modules give loop skeletons; later modules give only function signatures.
 ```bash
 cargo test -- --ignored    # Run all exercises in this module
 ```
 
-**3. Break** — Attack weakened versions of what you just built. See why small keys, nonce reuse, and bad parameters are fatal.
+**3. Break.** Attack weakened versions of what you just built. See why small keys, nonce reuse, and bad parameters are fatal.
 
-**4. Connect** — Trace your math to real protocols. Find your group theory in TLS, your curves in Bitcoin, your pairings in Ethereum.
+**4. Connect.** Trace your math to real protocols. Find your group theory in TLS, your curves in Bitcoin, your pairings in Ethereum.
 
 <details>
 <summary><strong>Installation (local setup)</strong></summary>
