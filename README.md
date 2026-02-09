@@ -44,6 +44,10 @@ Traditional crypto education either drowns you in pure math or hands you a libra
 **No install needed.** Launch in your browser:
 
 [![Launch Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/duyuefeng0708/learn-cryptography/main?labpath=foundations%2F01-modular-arithmetic-groups%2Fsage%2F01a-integers-and-division.ipynb)
+&nbsp;&nbsp;
+[![Open in CoCalc](https://img.shields.io/badge/Open%20in-CoCalc-blue.svg)](https://cocalc.com/github/duyuefeng0708/learn-cryptography)
+
+> **Binder** is free and launches instantly. **CoCalc** has native SageMath support and is better for longer sessions.
 
 Or clone locally:
 
