@@ -2,84 +2,90 @@
 
 [![CI](../../actions/workflows/ci.yml/badge.svg)](../../actions/workflows/ci.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
+[![Launch Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/duyuefeng0708/learn-cryptography/main)
 
-Open-source cryptography teaching materials for BSc and postgraduate students.
-Learn the math, build it in Rust, break it, then see it in the wild.
+**Learn cryptography by building it.** 123 interactive notebooks, 57 Rust exercises, 12 modules — from modular arithmetic to zero-knowledge proofs.
 
-## Quick Start
+<p align="center">
+  <img src="docs/images/module-flow.png" alt="Learning flow: Explore, Implement, Break, Connect" width="100%">
+</p>
+
+## Why This Exists
+
+Traditional crypto education either drowns you in pure math or hands you a library. We bridge the gap:
+
+- **Explore** the math in SageMath — visualize groups, curves, and lattices
+- **Implement** every primitive from scratch in Rust — no magic black boxes
+- **Break** weakened versions — see exactly why parameters matter
+- **Connect** to real protocols — find your math in TLS, Bitcoin, Signal, and Zcash
+
+<p align="center">
+  <img src="docs/images/elliptic-curve.png" alt="Elliptic curve point addition" width="45%">
+  &nbsp;&nbsp;
+  <img src="docs/images/lattice-basis.png" alt="Lattice basis reduction" width="50%">
+</p>
+
+## Try It Now
+
+**No install needed** — launch in your browser:
+
+[![Launch Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/duyuefeng0708/learn-cryptography/main?labpath=foundations%2F01-modular-arithmetic-groups%2Fsage%2F01a-integers-and-division.ipynb)
+
+Or clone locally:
 
 ```bash
-git clone https://github.com/YOUR-USER/crypto-from-first-principles.git
-cd crypto-from-first-principles
+git clone https://github.com/duyuefeng0708/learn-cryptography.git
+cd learn-cryptography
 conda activate sage
 jupyter notebook foundations/01-modular-arithmetic-groups/sage/01a-integers-and-division.ipynb
 ```
 
-## Philosophy
-
-Traditional crypto education either drowns you in pure math or hands you a library.
-We bridge the gap: **algebra → intuition → working code → real protocols**.
-
-Every module follows four phases:
-
-1. **Explore** in SageMath notebooks that build mathematical intuition
-2. **Implement** in Rust, building each cryptographic primitive from scratch
-3. **Break** weakened versions to understand why parameters matter
-4. **Connect** the math to real protocols like TLS, Signal, and Zcash
-
-## Structure
+## Modules
 
 ### Foundations (BSc)
 
-| # | Module | Key Concepts |
-|---|--------|-------------|
-| 01 | Modular Arithmetic & Groups | Cyclic groups, generators, order, Lagrange's theorem |
-| 02 | Rings, Fields & Polynomials | Ring axioms, ideals, polynomial rings, irreducibility |
-| 03 | Galois Fields & AES | GF(2^n), AES S-box, MixColumns as field arithmetic |
-| 04 | Number Theory & RSA | Euler/Fermat, CRT, RSA internals, padding |
-| 05 | Discrete Log & Diffie-Hellman | DLP, CDH, DDH, key exchange |
-| 06 | Elliptic Curves | Weierstrass form, point addition, ECDH, ECDSA |
+| # | Module | What You'll Build | Notebooks |
+|---|--------|-------------------|-----------|
+| 01 | Modular Arithmetic & Groups | Cyclic groups, generators, Lagrange's theorem | 6 explore · 2 break · 2 connect |
+| 02 | Rings, Fields & Polynomials | Ring axioms, polynomial rings, irreducibility | 6 explore · 2 break · 2 connect |
+| 03 | Galois Fields & AES | GF(2^8), AES S-box, MixColumns | 6 explore · 2 break · 2 connect |
+| 04 | Number Theory & RSA | Euler/Fermat, CRT, RSA from scratch | 6 explore · 3 break · 2 connect |
+| 05 | Discrete Log & Diffie-Hellman | DLP, CDH, DDH, key exchange | 6 explore · 3 break · 2 connect |
+| 06 | Elliptic Curves | Point addition, ECDH, ECDSA | 6 explore · 3 break · 3 connect |
 
 ### Frontier (Postgraduate)
 
-| # | Module | Key Concepts |
-|---|--------|-------------|
-| 07 | Bilinear Pairings | Weil/Tate pairing, BLS signatures, IBE |
-| 08 | Lattices & Post-Quantum | LWE, Ring-LWE, NTRU, Kyber/Dilithium |
-| 09 | Commitments & Sigma Protocols | Pedersen, Schnorr, Fiat-Shamir |
-| 10 | SNARKs & STARKs | R1CS, QAP, Groth16, FRI |
-| 11 | Homomorphic Encryption | BGV, BFV, CKKS |
-| 12 | Multi-Party Computation | Secret sharing, Yao's GC, SPDZ |
+| # | Module | What You'll Build | Notebooks |
+|---|--------|-------------------|-----------|
+| 07 | Bilinear Pairings | Weil/Tate pairing, BLS signatures, IBE | 5 explore · 2 break · 2 connect |
+| 08 | Lattices & Post-Quantum | LWE, Ring-LWE, Kyber overview | 6 explore · 2 break · 2 connect |
+| 09 | Commitments & Sigma Protocols | Pedersen, Schnorr, Fiat-Shamir | 5 explore · 2 break · 2 connect |
+| 10 | SNARKs & STARKs | R1CS, QAP, Groth16, FRI | 5 explore · 2 break · 3 connect |
+| 11 | Homomorphic Encryption | BGV, BFV, CKKS | 5 explore · 2 break · 3 connect |
+| 12 | Multi-Party Computation | Secret sharing, Yao's GC, SPDZ | 5 explore · 2 break · 3 connect |
 
 ## How to Work Through a Module
 
-Each module has its own `README.md` with prerequisites, learning objectives, and a detailed roadmap. Here's the general workflow:
+Each module has its own `README.md` with prerequisites, learning objectives, and a detailed roadmap.
 
-### 1. Explore (SageMath notebooks)
+**1. Explore** — Work through the SageMath notebooks in order (a, b, c, ...). Run every cell, modify examples, answer the exercises.
+
+**2. Implement** — Open `rust/src/lib.rs` and replace `todo!()` with your code. Early modules give loop skeletons; later modules give only function signatures.
 ```bash
-cd foundations/01-modular-arithmetic-groups/sage
-jupyter notebook 01a-integers-and-division.ipynb
+cargo test -- --ignored    # Run all exercises in this module
 ```
-Work through the notebooks **in order** (a → b → c → ...). Each builds on the last with no logical jumps. Run every cell, modify examples, answer the exercises.
 
-### 2. Implement (Rust exercises)
-```bash
-cd foundations/01-modular-arithmetic-groups/rust
-cargo test -- --ignored test_mod_exp   # Run a specific exercise
-cargo test -- --ignored               # Run all exercises in this module
-```
-Each `lib.rs` contains exercises ordered by difficulty. Replace `todo!()` with your implementation. Early modules provide loop skeletons and hints; later modules give only function signatures.
+**3. Break** — Attack weakened versions of what you just built. See why small keys, nonce reuse, and bad parameters are fatal.
 
-### 3. Break
-Open the `break/` directory for guided attacks on weakened versions of the primitives you just built. These show *why* parameter choices and security properties matter.
+**4. Connect** — Trace your math to real protocols. Find your group theory in TLS, your curves in Bitcoin, your pairings in Ethereum.
 
-### 4. Connect
-The `connect/` directory traces the math to real protocols. Find where your group theory shows up in TLS, where your elliptic curves appear in Signal, and so on.
+<details>
+<summary><strong>Installation (local setup)</strong></summary>
 
-## Prerequisites
+### Prerequisites
 
-- **Rust** ≥ 1.75
-- **SageMath** ≥ 10.0 (via conda)
+- **Rust** >= 1.75
+- **SageMath** >= 10.0 (via conda)
 - **Jupyter** with SageMath kernel
 
 ### Linux (Ubuntu/Debian)
@@ -162,12 +168,14 @@ Install the [Jupyter](https://marketplace.visualstudio.com/items?itemName=ms-too
 
 The server stays running. You only need to do steps 2 through 4 once per session.
 
+</details>
+
 ## Roadmap
 
 - [x] SageMath exploration notebooks (72 notebooks across 12 modules)
 - [x] Scaffolded Rust exercises (57 functions with progressive difficulty)
 - [x] Break/connect notebooks (55 notebooks across 12 modules)
-- [ ] Binder integration for zero-install browser experience
+- [x] Binder integration for zero-install browser experience
 - [ ] Community-contributed exercises and visualizations
 
 ## Contributing
