@@ -166,8 +166,7 @@ The server stays running. You only need to do steps 2 through 4 once per session
 
 - [x] SageMath exploration notebooks (72 notebooks across 12 modules)
 - [x] Scaffolded Rust exercises (57 functions with progressive difficulty)
-- [x] Module 01 break/connect notebooks (attack and protocol notebooks)
-- [ ] Break/connect notebooks for Modules 02-12
+- [x] Break/connect notebooks (55 notebooks across 12 modules)
 - [ ] Binder integration for zero-install browser experience
 - [ ] Community-contributed exercises and visualizations
 
