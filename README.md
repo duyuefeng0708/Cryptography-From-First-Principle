@@ -24,7 +24,7 @@ Traditional crypto education either drowns you in pure math or hands you a libra
 
 | | This Repo | Cryptopals | CryptoHack | MoonMath | Boneh (Stanford) |
 |---|:---:|:---:|:---:|:---:|:---:|
-| Interactive notebooks | 123 SageMath | none | web-only | PDF only | none |
+| Interactive notebooks | yes (Jupyter) | none | web-only | PDF only | none |
 | Math foundations | algebra to ZK | none | some | excellent | excellent |
 | Build from scratch | Rust | Python | Python | none | none |
 | Visualizations | plots + graphs | none | some | none | none |
