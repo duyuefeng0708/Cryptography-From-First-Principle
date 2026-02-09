@@ -1,5 +1,7 @@
 # Module 06: Elliptic Curves
 
+[![View on nbviewer](https://img.shields.io/badge/render-nbviewer-orange.svg)](https://nbviewer.org/github/duyuefeng0708/learn-cryptography/tree/main/foundations/06-elliptic-curves/sage/)
+
 The same group theory, a different (and better) group. These curves power modern crypto.
 
 ## Prerequisites

@@ -1,5 +1,7 @@
 # Module 04: Number Theory and RSA
 
+[![View on nbviewer](https://img.shields.io/badge/render-nbviewer-orange.svg)](https://nbviewer.org/github/duyuefeng0708/learn-cryptography/tree/main/foundations/04-number-theory-rsa/sage/)
+
 The number theory that makes RSA work, and the attacks that break it when the math is sloppy.
 
 ## Prerequisites

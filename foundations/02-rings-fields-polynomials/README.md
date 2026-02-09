@@ -1,5 +1,7 @@
 # Module 02: Rings, Fields, and Polynomials
 
+[![View on nbviewer](https://img.shields.io/badge/render-nbviewer-orange.svg)](https://nbviewer.org/github/duyuefeng0708/learn-cryptography/tree/main/foundations/02-rings-fields-polynomials/sage/)
+
 Adding a second operation opens the door to polynomial algebra and field extensions.
 
 ## Prerequisites

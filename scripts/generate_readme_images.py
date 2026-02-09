@@ -209,9 +209,62 @@ def generate_module_flow():
     print(f"  Saved {OUT / 'module-flow.png'}")
 
 
+def generate_social_preview():
+    """1280x640 social preview for GitHub link sharing."""
+    fig, ax = plt.subplots(figsize=(12.8, 6.4))
+    ax.set_xlim(0, 12.8)
+    ax.set_ylim(0, 6.4)
+    ax.axis('off')
+
+    # Small elliptic curve in the bottom-right corner
+    x = np.linspace(-1.2, 2.2, 1500)
+    rhs = x**3 - x + 1
+    mask = rhs >= 0
+    y = np.sqrt(np.maximum(rhs, 0))
+    # Scale and shift to bottom-right
+    sx, sy_offset, scale = 9.5, 1.8, 0.9
+    ax.plot(x[mask] * scale + sx, y[mask] * scale + sy_offset, color=CYAN, linewidth=1.8, alpha=0.35)
+    ax.plot(x[mask] * scale + sx, -y[mask] * scale + sy_offset, color=CYAN, linewidth=1.8, alpha=0.35)
+
+    # Title
+    ax.text(6.4, 4.6, 'Crypto From First Principles', ha='center', va='center',
+            fontsize=36, fontweight='bold', color='#e6edf3')
+
+    # Stats line
+    ax.text(6.4, 3.6, '123 notebooks  |  57 Rust exercises  |  12 modules',
+            ha='center', va='center', fontsize=18, color=CYAN)
+
+    # Tagline
+    ax.text(6.4, 2.6, 'Learn the math. Build it in Rust. Break it. See it in the wild.',
+            ha='center', va='center', fontsize=16, color='#8b949e', style='italic')
+
+    # Phase chips at the bottom
+    phases = [
+        ('Explore', CYAN, 2.5),
+        ('Implement', GREEN, 5.0),
+        ('Break', ORANGE, 7.5),
+        ('Connect', PURPLE, 10.0),
+    ]
+    for label, color, cx in phases:
+        rect = FancyBboxPatch((cx - 1.0, 0.8), 2.0, 0.9,
+                               boxstyle="round,pad=0.12",
+                               facecolor=color + '20', edgecolor=color,
+                               linewidth=1.5)
+        ax.add_patch(rect)
+        ax.text(cx, 1.25, label, ha='center', va='center',
+                fontsize=14, fontweight='bold', color=color)
+
+    fig.tight_layout(pad=0)
+    fig.savefig(OUT / 'social-preview.png', dpi=100, bbox_inches='tight',
+                facecolor=fig.get_facecolor(), pad_inches=0.2)
+    plt.close(fig)
+    print(f"  Saved {OUT / 'social-preview.png'}")
+
+
 if __name__ == '__main__':
     print("Generating README images...")
     generate_elliptic_curve()
     generate_lattice()
     generate_module_flow()
+    generate_social_preview()
     print("Done!")

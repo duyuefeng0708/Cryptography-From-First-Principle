@@ -3,6 +3,7 @@
 [![CI](../../actions/workflows/ci.yml/badge.svg)](../../actions/workflows/ci.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 [![Launch Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/duyuefeng0708/learn-cryptography/main)
+[![GitHub Discussions](https://img.shields.io/github/discussions/duyuefeng0708/learn-cryptography)](https://github.com/duyuefeng0708/learn-cryptography/discussions)
 
 **Learn cryptography by building it.** 123 interactive notebooks, 57 Rust exercises, 12 modules — from modular arithmetic to zero-knowledge proofs.
 
@@ -18,6 +19,19 @@ Traditional crypto education either drowns you in pure math or hands you a libra
 - **Implement** every primitive from scratch in Rust — no magic black boxes
 - **Break** weakened versions — see exactly why parameters matter
 - **Connect** to real protocols — find your math in TLS, Bitcoin, Signal, and Zcash
+
+### How does this compare?
+
+| | This Repo | Cryptopals | CryptoHack | MoonMath | Boneh (Stanford) |
+|---|:---:|:---:|:---:|:---:|:---:|
+| Interactive notebooks | 123 | — | web-only | PDF | — |
+| Math foundations | algebra → ZK | — | some | excellent | excellent |
+| Build from scratch | Rust | Python | Python | — | — |
+| Visualizations | SageMath plots | — | some | — | — |
+| Attack labs | 27 notebooks | 48 challenges | 100+ challenges | — | — |
+| Protocol connections | TLS, Bitcoin, Signal | — | — | Ethereum/ZK | — |
+| Zero-install (Binder) | yes | — | yes (web) | — | — |
+| Scope | groups → FHE/MPC | symmetric + PK | varied | algebra → ZK | broad theory |
 
 <p align="center">
   <img src="docs/images/elliptic-curve.png" alt="Elliptic curve point addition" width="45%">

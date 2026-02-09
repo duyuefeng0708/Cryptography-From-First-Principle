@@ -1,5 +1,7 @@
 # Module 11: Homomorphic Encryption
 
+[![View on nbviewer](https://img.shields.io/badge/render-nbviewer-orange.svg)](https://nbviewer.org/github/duyuefeng0708/learn-cryptography/tree/main/frontier/11-homomorphic-encryption/sage/)
+
 Computing on encrypted data, the holy grail of privacy preserving computation.
 
 ## Prerequisites
