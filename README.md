@@ -24,14 +24,14 @@ Traditional crypto education either drowns you in pure math or hands you a libra
 
 | | This Repo | Cryptopals | CryptoHack | MoonMath | Boneh (Stanford) |
 |---|:---:|:---:|:---:|:---:|:---:|
-| Interactive notebooks | 123 | — | web-only | PDF | — |
-| Math foundations | algebra → ZK | — | some | excellent | excellent |
-| Build from scratch | Rust | Python | Python | — | — |
-| Visualizations | SageMath plots | — | some | — | — |
-| Attack labs | 27 notebooks | 48 challenges | 100+ challenges | — | — |
-| Protocol connections | TLS, Bitcoin, Signal | — | — | Ethereum/ZK | — |
-| Zero-install (Binder) | yes | — | yes (web) | — | — |
-| Scope | groups → FHE/MPC | symmetric + PK | varied | algebra → ZK | broad theory |
+| Interactive notebooks | 123 SageMath | none | web-only | PDF only | none |
+| Math foundations | algebra to ZK | none | some | excellent | excellent |
+| Build from scratch | Rust | Python | Python | none | none |
+| Visualizations | plots + graphs | none | some | none | none |
+| Attack labs | 27 notebooks | 48 challenges | 100+ challenges | none | none |
+| Protocol connections | TLS, Bitcoin, Signal | none | none | Ethereum/ZK | none |
+| Zero-install (Binder) | yes | no | yes (web) | no | no |
+| Scope | groups to FHE/MPC | symmetric + PK | varied | algebra to ZK | broad theory |
 
 <p align="center">
   <img src="docs/images/elliptic-curve.png" alt="Elliptic curve point addition" width="45%">
