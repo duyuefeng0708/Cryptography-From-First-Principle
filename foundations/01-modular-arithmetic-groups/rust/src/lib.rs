@@ -54,11 +54,13 @@ pub fn gcd(a: u64, b: u64) -> u64 {
     //   return a
     let mut a = a;
     let mut b = b;
-    while b != 0 {
+    loop {
+        if b == 0 {
+            return a;
+        }
         // TODO: one step — set (a, b) = (b, a % b)
         todo!("Update a and b")
     }
-    a
 }
 
 /// Check whether `g` is a generator of (Z/pZ)*.

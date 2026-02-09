@@ -1,0 +1,35 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  rust:
+    name: Rust build & clippy
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: dtolnay/rust-toolchain@stable
+        with:
+          components: clippy
+      - run: cargo build --workspace
+      - run: cargo clippy --workspace -- -D warnings
+
+  notebooks:
+    name: Validate notebook JSON
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Check all .ipynb files are valid JSON
+        run: |
+          status=0
+          for f in $(find . -name '*.ipynb'); do
+            python3 -c "import json; json.load(open('$f'))" 2>/dev/null || {
+              echo "INVALID: $f"
+              status=1
+            }
+          done
+          exit $status

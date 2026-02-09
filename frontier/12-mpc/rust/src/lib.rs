@@ -51,6 +51,7 @@ pub fn additive_reconstruct(shares: &[u64]) -> u64 {
 /// 2. Party's share of a*b = w + e*u + d*v + d*e
 ///
 /// Here we simulate a single party's computation given opened d and e.
+#[allow(clippy::too_many_arguments)]
 pub fn beaver_triple_mul(
     a_share: u64,
     b_share: u64,

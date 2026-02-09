@@ -1,7 +1,19 @@
 # Crypto From First Principles
 
+[![CI](../../actions/workflows/ci.yml/badge.svg)](../../actions/workflows/ci.yml)
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
+
 Open-source cryptography teaching materials for BSc and postgraduate students.
 Learn the math, build it in Rust, break it, then see it in the wild.
+
+## Quick Start
+
+```bash
+git clone https://github.com/YOUR-USER/crypto-from-first-principles.git
+cd crypto-from-first-principles
+conda activate sage
+jupyter notebook foundations/01-modular-arithmetic-groups/sage/01a-integers-and-division.ipynb
+```
 
 ## Philosophy
 
@@ -149,6 +161,19 @@ Install the [Jupyter](https://marketplace.visualstudio.com/items?itemName=ms-too
 4. Select the **SageMath** kernel from the list.
 
 The server stays running. You only need to do steps 2 through 4 once per session.
+
+## Roadmap
+
+- [x] SageMath exploration notebooks (72 notebooks across 12 modules)
+- [x] Scaffolded Rust exercises (57 functions with progressive difficulty)
+- [x] Module 01 break/connect notebooks (attack and protocol notebooks)
+- [ ] Break/connect notebooks for Modules 02-12
+- [ ] Binder integration for zero-install browser experience
+- [ ] Community-contributed exercises and visualizations
+
+## Contributing
+
+See [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines on reporting issues, adding content, and submitting PRs.
 
 ## License
 

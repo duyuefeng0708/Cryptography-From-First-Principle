@@ -33,6 +33,7 @@ pub fn evaluate_circuit(gates: &[Gate], inputs: &[i64], modulus: i64) -> Vec<i64
 /// and the witness vector is [1, inputs..., intermediates..., output].
 ///
 /// Each matrix is Vec<Vec<i64>> (rows × witness_size).
+#[allow(clippy::type_complexity)]
 pub fn circuit_to_r1cs(
     gates: &[Gate],
     num_inputs: usize,
