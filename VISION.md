@@ -34,12 +34,22 @@ Module NN: <Topic>
 ├── video/
 │   ├── NN-manim/                          # Manim animation source (polished)
 │   └── NN-excalidraw-recording/           # Excalidraw screen-capture (lightweight)
-├── sage/                                  # interactive exploration notebooks
+├── python/                                # pure Python notebooks (JupyterLite, browser)
+├── sage/                                  # SageMath notebooks (Codespaces / local)
 ├── rust/                                  # build-from-scratch exercises
 ├── break/                                 # attack weakened constructions
 ├── connect/                               # trace math into real protocols
 └── lean4/                                 # formal verification of key theorems
 ```
+
+### Infrastructure: Two-Tier Access
+
+The original Binder + SageMath setup takes 10+ minutes to build, killing onboarding. The new approach:
+
+- **Primary (instant, browser):** JupyterLite on GitHub Pages. Pure Python notebooks using `cryptolab` — a pedagogical library replacing SageMath primitives with readable, transparent Python. Click a link, running in 5 seconds.
+- **Secondary (full power):** GitHub Codespaces or local Docker with SageMath + Rust + Lean4. Builds in ~1 minute.
+
+Both notebook tracks (python/ and sage/) cover the same material, are tested for output parity in CI, and link to each other. Some advanced notebooks (e.g., Weil pairing internals) are marked "SageMath-only" when the pure Python version would be impractically slow. See `MIGRATION-PLAN.md` for the full migration strategy.
 
 ### Why Six Layers, Not Four
 
@@ -162,7 +172,7 @@ Each Beamer deck should cover:
 
 ### Format A: Manim Animations (High Polish)
 
-3Blue1Brown-style. Best for topics where **continuous geometric transformation** is the key insight:
+3Blue1Brown–style. Best for topics where **continuous geometric transformation** is the key insight:
 
 | Priority | Topic                           | Core Visual Idea                                                     |
 |----------|---------------------------------|----------------------------------------------------------------------|
@@ -185,9 +195,18 @@ These two formats serve different purposes: Manim videos are *destination conten
 
 ## Layer 4–6: Existing Layers (Enhanced)
 
-### Layer 4: SageMath Notebooks (Explore)
+### Layer 4: Exploration Notebooks (Dual-Track: Python + SageMath)
 
-Already strong. Enhancements:
+Every module ships two parallel notebook tracks:
+
+- **`python/`** — Pure Python 3 using `cryptolab` (our pedagogical library) + sympy + matplotlib. Runs instantly in JupyterLite (browser). This is the default for new users.
+- **`sage/`** — SageMath kernel. Richer algebra system, needed for advanced operations (pairings, `abelian_group()`, certified LLL). Runs in Codespaces or local install.
+
+Both tracks cover the same material, same exercises, same outputs. CI checks parity. A few frontier notebooks (e.g., optimal Ate pairing) are marked SageMath-only.
+
+The `cryptolab` library is itself pedagogical: its `GF(p)` class is ~50 lines of readable Python with a `pow_verbose()` method that prints every step of square-and-multiply. This aligns with the "no magic black boxes" philosophy — when students call `GF(17)(3) ** 5`, they can inspect exactly what happened.
+
+Enhancements to both tracks:
 
 - Add **AI tutor prompts** at the end of each notebook: a carefully engineered system prompt that turns Claude/GPT into a Socratic tutor for that specific topic. The prompt includes the module context, common misconceptions, and instructions to guide rather than answer directly.
 - Add **"What if?" cells**: pre-written parameter variations that let students see what happens when they break assumptions (e.g., "What if p is not prime?" → watch the group structure collapse).
@@ -319,6 +338,9 @@ External contributor wants to add content
 
 ### Year 1 (2026–2027)
 
+- [ ] **Infrastructure: JupyterLite on GitHub Pages + `cryptolab` library**
+- [ ] Pure Python mirrors for Modules 01–06 (Foundations) — instant browser access
+- [ ] Notebook parity CI (Python vs SageMath output comparison)
 - [ ] Excalidraw Part 1 slides for Modules 01–06 (Foundations)
 - [ ] Beamer Part 2 slides for Modules 01–06
 - [ ] 2–3 Manim videos (Elliptic Curves, Lattices, ZK intro)
@@ -330,6 +352,7 @@ External contributor wants to add content
 
 ### Year 2 (2027–2028)
 
+- [ ] Pure Python mirrors for Modules 07–12 (Frontier) where feasible
 - [ ] Excalidraw + Beamer for Modules 07–12 (Frontier)
 - [ ] 5–7 more Manim videos (Pairings, FHE, MPC, Schnorr, Groth16)
 - [ ] Lean4: game-based security definitions, RSA reduction, Pedersen
