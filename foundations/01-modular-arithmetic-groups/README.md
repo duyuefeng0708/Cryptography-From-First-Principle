@@ -16,18 +16,28 @@ After completing this module you will:
 3. Compute generators and orders of cyclic groups
 4. Apply Lagrange's theorem to reason about subgroup structure
 
-## Explore (SageMath Notebooks)
+## Two Ways to Run
+
+Every notebook has two versions. Choose whichever works for you.
+
+| | Python (browser) | SageMath |
+|---|---|---|
+| **Setup** | Zero install, runs in JupyterLite | Needs local install or Codespaces |
+| **Launch time** | ~5 seconds | ~1 minute (Codespaces) or 10+ min (Binder) |
+| **Best for** | Quick exploration, mobile, first-timers | Full algebra system, research-grade computations |
+
+## Explore
 
 Work through these notebooks in order:
 
-| # | Notebook | What You'll Learn |
-|---|----------|-------------------|
-| a | [Integers and Division](sage/01a-integers-and-division.ipynb) | Divisibility, remainders, and the division algorithm |
-| b | [Modular Arithmetic](sage/01b-modular-arithmetic.ipynb) | Addition, multiplication, and exponentiation mod n |
-| c | [Groups: First Look](sage/01c-groups-first-look.ipynb) | What makes a set + operation a group |
-| d | [Cyclic Groups and Generators](sage/01d-cyclic-groups-generators.ipynb) | Generators, cyclic structure, and element orders |
-| e | [Subgroups and Lagrange](sage/01e-subgroups-lagrange.ipynb) | Subgroups, cosets, and Lagrange's theorem |
-| f | [Group Visualization](sage/01f-group-visualization.ipynb) | Cayley tables, cycle graphs, and visual intuition |
+| # | Notebook | Python | SageMath |
+|---|----------|--------|----------|
+| a | Integers and Division | [python](python/01a-integers-and-division.ipynb) | [sage](sage/01a-integers-and-division.ipynb) |
+| b | Modular Arithmetic | [python](python/01b-modular-arithmetic.ipynb) | [sage](sage/01b-modular-arithmetic.ipynb) |
+| c | Groups: First Look | [python](python/01c-groups-first-look.ipynb) | [sage](sage/01c-groups-first-look.ipynb) |
+| d | Cyclic Groups and Generators | [python](python/01d-cyclic-groups-generators.ipynb) | [sage](sage/01d-cyclic-groups-generators.ipynb) |
+| e | Subgroups and Lagrange | [python](python/01e-subgroups-lagrange.ipynb) | [sage](sage/01e-subgroups-lagrange.ipynb) |
+| f | Group Visualization | [python](python/01f-group-visualization.ipynb) | [sage](sage/01f-group-visualization.ipynb) |
 
 ## Implement (Rust)
 
@@ -45,15 +55,17 @@ Run: `cargo test -p mod-arith-groups`
 
 ## Break
 
-Try these attacks in the `break/` folder:
-- Recover a secret from a group with smooth order by factoring the order and solving in each subgroup
-- Exploit weak generator choice to reduce the search space of a brute force attack
+| Attack | Python | SageMath |
+|--------|--------|----------|
+| Smooth-Order Attack (Pohlig-Hellman) | [python](python/break-smooth-order-attack.ipynb) | [sage](sage/break-smooth-order-attack.ipynb) |
+| Weak Generator Attack | [python](python/break-weak-generator-attack.ipynb) | [sage](sage/break-weak-generator-attack.ipynb) |
 
 ## Connect
 
-See where this shows up in practice (in the `connect/` folder):
-- RSA key generation relies on modular arithmetic for encryption and decryption
-- Diffie-Hellman parameter selection: choosing a safe prime ensures the group has strong structure
+| Application | Python | SageMath |
+|-------------|--------|----------|
+| RSA Key Generation | [python](python/connect-rsa-key-generation.ipynb) | [sage](sage/connect-rsa-key-generation.ipynb) |
+| Diffie-Hellman Parameter Selection | [python](python/connect-dh-parameter-selection.ipynb) | [sage](sage/connect-dh-parameter-selection.ipynb) |
 
 ---
 *Next: [Module 02: Rings, Fields, and Polynomials](../02-rings-fields-polynomials/)*
