@@ -1,6 +1,6 @@
 # Module 07: Bilinear Pairings
 
-[![View on nbviewer](https://img.shields.io/badge/render-nbviewer-orange.svg)](https://nbviewer.org/github/duyuefeng0708/learn-cryptography/tree/main/frontier/07-pairings/sage/)
+[![View on nbviewer](https://img.shields.io/badge/render-nbviewer-orange.svg)](https://nbviewer.org/github/duyuefeng0708/Cryptography-From-First-Principle/tree/main/frontier/07-pairings/sage/)
 
 A map between curve groups that unlocks BLS signatures, IBE, and the road to SNARKs.
 

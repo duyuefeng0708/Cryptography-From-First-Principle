@@ -1,6 +1,6 @@
 # Module 10: SNARKs and STARKs
 
-[![View on nbviewer](https://img.shields.io/badge/render-nbviewer-orange.svg)](https://nbviewer.org/github/duyuefeng0708/learn-cryptography/tree/main/frontier/10-snarks-starks/sage/)
+[![View on nbviewer](https://img.shields.io/badge/render-nbviewer-orange.svg)](https://nbviewer.org/github/duyuefeng0708/Cryptography-From-First-Principle/tree/main/frontier/10-snarks-starks/sage/)
 
 Succinct proofs of computation, from arithmetic circuits to verifiable computation.
 

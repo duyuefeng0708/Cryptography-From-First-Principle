@@ -120,7 +120,7 @@ shared/
   ```yaml
   # .github/workflows/lite.yml
   - Build JupyterLite with contents from python/ directories
-  - Deploy to GitHub Pages at learn-cryptography.github.io
+  - Deploy to GitHub Pages at Cryptography-From-First-Principle.github.io
   ```
 - [ ] Create devcontainer.json for Codespaces:
   ```json
@@ -134,7 +134,7 @@ shared/
   ```
 - [ ] Update README with two-tier "Try It Now" buttons:
   ```markdown
-  [![Open in Browser](badge)](https://duyuefeng0708.github.io/learn-cryptography)  ← instant
+  [![Open in Browser](badge)](https://duyuefeng0708.github.io/Cryptography-From-First-Principle)  ← instant
   [![Open in Codespaces](badge)](https://codespaces.new/...)                        ← full env
   ```
 
@@ -329,7 +329,7 @@ This catches drift between the two versions.
 {
   "jupyter-lite-schema-version": 0,
   "jupyter-config-data": {
-    "contentsStorageName": "learn-cryptography",
+    "contentsStorageName": "Cryptography-From-First-Principle",
     "appName": "Crypto From First Principles"
   }
 }

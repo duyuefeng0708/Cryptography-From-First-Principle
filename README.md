@@ -2,8 +2,8 @@
 
 [![CI](../../actions/workflows/ci.yml/badge.svg)](../../actions/workflows/ci.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
-[![Launch Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/duyuefeng0708/learn-cryptography/main)
-[![GitHub Discussions](https://img.shields.io/github/discussions/duyuefeng0708/learn-cryptography)](https://github.com/duyuefeng0708/learn-cryptography/discussions)
+[![Launch Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/duyuefeng0708/Cryptography-From-First-Principle/main)
+[![GitHub Discussions](https://img.shields.io/github/discussions/duyuefeng0708/Cryptography-From-First-Principle)](https://github.com/duyuefeng0708/Cryptography-From-First-Principle/discussions)
 
 **Learn cryptography by building it.** 123 interactive notebooks, 57 Rust exercises, 12 modules, from modular arithmetic to zero-knowledge proofs.
 
@@ -43,17 +43,17 @@ Traditional crypto education either drowns you in pure math or hands you a libra
 
 **No install needed.** Launch in your browser:
 
-[![Launch Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/duyuefeng0708/learn-cryptography/main?labpath=foundations%2F01-modular-arithmetic-groups%2Fsage%2F01a-integers-and-division.ipynb)
+[![Launch Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/duyuefeng0708/Cryptography-From-First-Principle/main?labpath=foundations%2F01-modular-arithmetic-groups%2Fsage%2F01a-integers-and-division.ipynb)
 &nbsp;&nbsp;
-[![Open in CoCalc](https://img.shields.io/badge/Open%20in-CoCalc-blue.svg)](https://cocalc.com/github/duyuefeng0708/learn-cryptography)
+[![Open in CoCalc](https://img.shields.io/badge/Open%20in-CoCalc-blue.svg)](https://cocalc.com/github/duyuefeng0708/Cryptography-From-First-Principle)
 
 > **Binder** is free and launches instantly. **CoCalc** has native SageMath support and is better for longer sessions.
 
 Or clone locally:
 
 ```bash
-git clone https://github.com/duyuefeng0708/learn-cryptography.git
-cd learn-cryptography
+git clone https://github.com/duyuefeng0708/Cryptography-From-First-Principle.git
+cd Cryptography-From-First-Principle
 conda activate sage
 jupyter notebook foundations/01-modular-arithmetic-groups/sage/01a-integers-and-division.ipynb
 ```

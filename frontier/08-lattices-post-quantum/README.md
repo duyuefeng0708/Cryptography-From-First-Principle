@@ -1,6 +1,6 @@
 # Module 08: Lattices and Post-Quantum Cryptography
 
-[![View on nbviewer](https://img.shields.io/badge/render-nbviewer-orange.svg)](https://nbviewer.org/github/duyuefeng0708/learn-cryptography/tree/main/frontier/08-lattices-post-quantum/sage/)
+[![View on nbviewer](https://img.shields.io/badge/render-nbviewer-orange.svg)](https://nbviewer.org/github/duyuefeng0708/Cryptography-From-First-Principle/tree/main/frontier/08-lattices-post-quantum/sage/)
 
 The geometry of integer grids, and why quantum computers can't break them.
 

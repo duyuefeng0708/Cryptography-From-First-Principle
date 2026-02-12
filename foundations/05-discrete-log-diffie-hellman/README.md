@@ -1,6 +1,6 @@
 # Module 05: The Discrete Logarithm and Diffie-Hellman
 
-[![View on nbviewer](https://img.shields.io/badge/render-nbviewer-orange.svg)](https://nbviewer.org/github/duyuefeng0708/learn-cryptography/tree/main/foundations/05-discrete-log-diffie-hellman/sage/)
+[![View on nbviewer](https://img.shields.io/badge/render-nbviewer-orange.svg)](https://nbviewer.org/github/duyuefeng0708/Cryptography-From-First-Principle/tree/main/foundations/05-discrete-log-diffie-hellman/sage/)
 
 The hardness assumption that powers key exchange and much of modern crypto.
 

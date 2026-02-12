@@ -1,6 +1,6 @@
 # Module 03: Galois Fields and AES
 
-[![View on nbviewer](https://img.shields.io/badge/render-nbviewer-orange.svg)](https://nbviewer.org/github/duyuefeng0708/learn-cryptography/tree/main/foundations/03-galois-fields-aes/sage/)
+[![View on nbviewer](https://img.shields.io/badge/render-nbviewer-orange.svg)](https://nbviewer.org/github/duyuefeng0708/Cryptography-From-First-Principle/tree/main/foundations/03-galois-fields-aes/sage/)
 
 See how abstract field theory becomes the concrete engine inside AES.
 

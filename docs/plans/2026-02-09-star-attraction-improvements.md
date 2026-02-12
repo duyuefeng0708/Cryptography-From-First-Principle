@@ -74,7 +74,7 @@ Expected: `docs/images/social-preview.png` created, ~50-100KB
 **Step 3: Upload as social preview via GitHub API**
 
 ```bash
-gh api repos/duyuefeng0708/learn-cryptography --method PATCH \
+gh api repos/duyuefeng0708/Cryptography-From-First-Principle --method PATCH \
   --input <(echo '{}') 2>/dev/null  # Note: social preview must be set via web UI
 ```
 
@@ -102,7 +102,7 @@ gh repo edit --enable-discussions
 **Step 2: Create a welcome discussion**
 
 ```bash
-gh api repos/duyuefeng0708/learn-cryptography/discussions \
+gh api repos/duyuefeng0708/Cryptography-From-First-Principle/discussions \
   -f title="Welcome! Introduce yourself" \
   -f body="Share your background and what brings you here. Are you a student? Researcher? Self-taught? Which module are you starting with?" \
   -f category_slug="general"
@@ -115,7 +115,7 @@ If the API call doesn't work, create manually via the web UI.
 Add a badge after the Binder badge:
 
 ```markdown
-[![Discussions](https://img.shields.io/github/discussions/duyuefeng0708/learn-cryptography)](https://github.com/duyuefeng0708/learn-cryptography/discussions)
+[![Discussions](https://img.shields.io/github/discussions/duyuefeng0708/Cryptography-From-First-Principle)](https://github.com/duyuefeng0708/Cryptography-From-First-Principle/discussions)
 ```
 
 **Step 4: Commit**
@@ -221,7 +221,7 @@ nbviewer renders notebooks beautifully with all outputs. Even without pre-render
 At the top of each module README, after the title, add:
 
 ```markdown
-[![View notebooks on nbviewer](https://img.shields.io/badge/render-nbviewer-orange.svg)](https://nbviewer.org/github/duyuefeng0708/learn-cryptography/tree/main/foundations/01-modular-arithmetic-groups/sage/)
+[![View notebooks on nbviewer](https://img.shields.io/badge/render-nbviewer-orange.svg)](https://nbviewer.org/github/duyuefeng0708/Cryptography-From-First-Principle/tree/main/foundations/01-modular-arithmetic-groups/sage/)
 ```
 
 Adjust the path for each module (foundations/01..., foundations/02..., frontier/07..., etc.).
@@ -245,7 +245,7 @@ Repository: `sobolevn/awesome-cryptography`
 Section: "Courses" or "Educational"
 Entry:
 ```markdown
-- [Crypto From First Principles](https://github.com/duyuefeng0708/learn-cryptography) - 123 interactive SageMath notebooks + Rust exercises covering abstract algebra through ZK proofs. Binder-ready.
+- [Crypto From First Principles](https://github.com/duyuefeng0708/Cryptography-From-First-Principle) - 123 interactive SageMath notebooks + Rust exercises covering abstract algebra through ZK proofs. Binder-ready.
 ```
 
 **Step 2: Fork and PR to awesome-rust**
